@@ -34,5 +34,19 @@ function self.scoreSave()
     end
 end
 
+--ランダム
+function self.typeBool()
+    local number  = math.random(0,100)
+    if number < 70 then
+        return true
+    else 
+        return false
+    end
+end
+
+function self.typeRandom()
+    local type = math.random(0,4)
+    return type
+end
 
 return self
