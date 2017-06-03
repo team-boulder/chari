@@ -21,6 +21,7 @@ end
 
 --タイマーストップ
 function self.stopTimer()
+    self.dist = 0
     timer.cancel(self.time)
 end
 
