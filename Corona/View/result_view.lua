@@ -22,8 +22,13 @@ function self.create( params )
     obj.score.x = _W/2
     obj.score.value = "score"
     
+    obj.momiji = display.newEmitter( emitter.params[4] )
+	obj.momiji.x = _W/2
+	obj.momiji.y = 100
+
     obj.group:addEventListener('tap',self.tap)
     obj.group:insert(obj.bg)
+    obj.group:insert(obj.momiji)
     obj.group:insert(obj.score)
     obj.group:insert(obj.gameover)
 	-- end
