@@ -32,12 +32,12 @@ local function viewHandler( event )
 
 		if event.value == 'shop' then
 			print('Hello')
-			storyboard.gotoScene(ContDir..'result', {params = {score = play_model.dist or 0}})
+			--storyboard.gotoScene(ContDir..'result', {params = {score = play_model.dist or 0}})
 		end
 
 		if event.value == 'shop' then
 			print('Hello')
-			storyboard.gotoScene(ContDir..'result', {params = {score = play_model.dist or 0}})
+			--storyboard.gotoScene(ContDir..'result', {params = {score = play_model.dist or 0}})
 		end
 		if event.value == 'jumpjump' then
 			count = count + 1
