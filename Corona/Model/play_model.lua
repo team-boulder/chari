@@ -1,22 +1,21 @@
-local self = {}
+local self = object.new()
 
 self.dist = 0
 self.maxScore = 0
 
 local function listener(event)
     self.dist = self.dist + 1
-    print(self.dist)
+    local event =
+    {
+        name = "play_model-distance",
+        dist = self.dist
+    } 
+    self:dispatchEvent( event )
 end
 
 --距離測定
 function self.distance()
     self.time = timer.performWithDelay(10,listener, -1)
-    --[[local event =
-    {
-        name = "play_model-distance",
-        dist = self.dist
-    } 
-    self:dispatchEvent( event )]]--
 end
 
 --タイマーストップ
