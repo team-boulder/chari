@@ -43,9 +43,6 @@ function self.create()
 		-- tytle
 		obj.BG = require( ViewDir .. 'background' )
 		obj.bg = obj.BG.create()
-		obj.cloud = display.newEmitter( emitter.params[3] )
-		obj.cloud.x = _W*1.5
-		obj.cloud.y = 100
 		obj.header = display.newRect(0,_H/5,_W,headerSize)
 		obj.header:setFillColor(unpack(themeColor))
 		obj.header.isVisible = false
@@ -73,11 +70,11 @@ function self.create()
 		-- obj.title2.y = _H/5 + headerSize*2/3
 		-- obj.title2:setFillColor(unpack(TextColor))
 
-		obj.title3 = display.newText('MaxScore：'..obj.scoreNum,0,0,'Noto-Midium.otf',50)
-		obj.title3:setReferencePoint(display.CenterReferencePoint)
-		obj.title3.x = _W/2
-		obj.title3.y = _H*5/7
-		obj.title3:setFillColor(unpack(themeColor))
+		obj.max = display.newText('MaxScore：'..obj.scoreNum,0,0,'Noto-Midium.otf',50)
+		obj.max:setReferencePoint(display.CenterReferencePoint)
+		obj.max.x = _W/2
+		obj.max.y = _H*5/7
+		obj.max:setFillColor(unpack(themeColor))
 
 		obj.chari = display.newImage( ImgDir..'home/chari.png', 0, 0)
    		obj.chari:scale(0.5,0.5)
@@ -119,10 +116,9 @@ function self.create()
 		obj.ruleButton:addEventListener('tap',self.tap)
 
 		obj.group:insert( obj.bg )
-		obj.group:insert( obj.cloud )
 		obj.group:insert( obj.header )
 		obj.group:insert( obj.title )
-		-- obj.group:insert( obj.title2 )
+		obj.group:insert( obj.max )
 		-- obj.group:insert( obj.title3 )
 		obj.group:insert( obj.chari )
 		obj.group:insert( obj.startButton )

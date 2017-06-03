@@ -3,7 +3,6 @@ local self = object.new()
 local obj = {}
 
 function self.create()
-	if obj.group == nil then
 		obj.group = display.newGroup()
 
 		-- tytle
@@ -17,7 +16,6 @@ function self.create()
 		obj.group:insert( obj.cloud )
 
 		return obj.group
-	end
 end
 
 
