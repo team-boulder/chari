@@ -3,6 +3,7 @@ local self = object.new()
 local on = 0
 local time = 5000
 local obj = {}
+local play_model = require( ModelDir .. 'play_model' )
 function self.create()
 	-- if obj.group == nil then
 		obj.group = display.newGroup()
@@ -12,11 +13,20 @@ function self.create()
     obj.bg:setFillColor(255,255,255)
 	obj.bg.value = 'bg'
 
-    obj.title = display.newText('キョリ',0,50,nil,40)
+    obj.title = display.newText('キョリ：',0,50,nil,40)
     obj.title:setFillColor(0)
     obj.title:setReferencePoint(display.CenterReferencePoint)
-    obj.title.x = _W/2
+    obj.title.x = _W/2 + 150
     obj.title.value = 'shop'
+
+	obj.dist = display.newText('',0,50,nil,40)
+	obj.dist:setFillColor(0)
+	obj.dist.x = _W/2 + 250
+	
+	obj.score = display.newText('Max Score：' .. playerInfoData['max_score'],0,50,nil,40)
+		-- obj.scoreNum = playerInfoData['max_score']
+    obj.score:setFillColor(0)
+    obj.score.x = _W/2 - 150
 
 	obj.ground = display.newRect(0,1000,_W,10)
 	obj.ground:setFillColor(0)
@@ -31,8 +41,14 @@ function self.create()
     obj.group:insert( obj.title )
     obj.group:insert( obj.ground )
     obj.group:insert( obj.player )
+	obj.group:insert( obj.score )
+	obj.group:insert( obj.dist )
 
     return obj.group
+end
+
+function self.refresh(dist)
+	obj.dist.text = dist
 end
 
 local function jumpStart()

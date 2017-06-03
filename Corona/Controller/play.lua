@@ -9,6 +9,13 @@ local play_model = require( ModelDir .. 'play_model' )
 local tapcount = 0
 local count = 0
 
+local function modelHandler( event )
+	print("get model event")
+	if event.name == 'play_model-distance' then
+		print(event)
+		play_view.refresh( event.dist ) 
+	end
+end
 
 local function viewHandler( event )
 	if event.name == 'play_view-tap' then
@@ -40,7 +47,7 @@ function scene:willEnterScene( event )
 	local group = self.view
 	play_model.distance()
 
-	--user_model:addEventListener( modelHandler )
+	play_model:addEventListener( modelHandler )
 	play_view:addEventListener( viewHandler )
 	playerInfoData['age'] = playerInfoData['age'] - 0.2
 	local view_obj = play_view.create()
