@@ -13,8 +13,8 @@ local function viewHandler( event )
 		if event.value == 'natsu' then
 			storyboard.gotoScene(ContDir..'natsu',{effect="slideLeft"})
 		end
-		if event.value == 'kuma' then
-			storyboard.gotoScene(ContDir..'kuma',{effect="slideLeft"})
+		if event.value == 'play' then
+			storyboard.gotoScene(ContDir..'play',{effect="slideLeft"})
 		end
 		if event.value == 'mae' then
 			storyboard.gotoScene(ContDir..'mae',{effect="slideLeft"})
