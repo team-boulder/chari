@@ -28,19 +28,29 @@ function self.create()
 	obj.dist.x = _W/2 + 250
 	
 	obj.score = display.newText('Max Score：' .. playerInfoData['max_score'],0,50,nil,40)
+		-- obj.scoreNum = playerInfoData['max_score']
     obj.score:setFillColor(0)
     obj.score.x = _W/2 - 150
 
 	obj.ground = display.newRect(0,1000,_W,10)
 	obj.ground:setFillColor(0)
-	physics.addBody(obj.ground,"static", {bounce = 0.0, friction = 1.0})
+	physics.addBody(obj.ground,"static", {bounce = 0.0, friction = 0.0})
 
 	obj.player = display.newImage( 'Icon-60.png', 80, 910)
     obj.player:scale(2,2)
 	obj.player.value = 'player'
-	physics.addBody(obj.player, {bounce = 0.0, friction = 1.0})
+	physics.addBody(obj.player, {bounce = 0.0, friction = 0.0})
 
-    obj.timer = timer.performWithDelay(100,self.checkPos, -1)
+	obj.block ={}
+	obj.block[1] = display.newRect(_W,obj.ground.y - 105,100,100)
+	obj.block[2] = display.newRect(_W,obj.ground.y - 105,100,100)
+	obj.block[3] = display.newRect(_W,obj.ground.y - 105,100,100)
+	obj.block[4] = display.newRect(_W,obj.ground.y - 105,100,100)
+	physics.addBody(obj.block[1], "static", {bounce = 0.0, friction = 0.0})
+	physics.addBody(obj.block[2], "static", {bounce = 0.0, friction = 0.0})
+	physics.addBody(obj.block[3], "static", {bounce = 0.0, friction = 0.0})
+	physics.addBody(obj.block[4], "static", {bounce = 0.0, friction = 0.0})
+	obj.blockStatus ={false,false,false,false}
 
     obj.title:addEventListener('tap',self.tap)
     obj.bg:addEventListener('tap',self.tap)
@@ -56,24 +66,19 @@ function self.create()
 end
 
 function self.createBlock()
-	local block = display.newRect(_W,obj.ground.y - 105,100,100)
-	obj.group:insert( block )
-	physics.addBody(block, 'static', {bounce = 0.0, friction = 0.0})
-	local function delBlock()
-		block = nil
-		display.remove(block)
+	print("create block")
+	local function delBlock(num)
+		obj.block[num].x = _W
+		obj.blockStatus[num] = false
 	end
-	transition.to(block,{ x = -100, time = 2000, transition = easing.linear, onComplete = delBlock})
+	for i,v in ipairs(obj.blockStatus) do
+		if v == false then
+			transition.to(obj.block[i],{ x = -100, time = 2000, transition = easing.linear, onComplete = delBlock(i)})
+			obj.blockStatus[i] = true
+		end
+	end
 end
 
-function self.checkPos()
-	if obj.player.x < -100 then
-		local event = {
-			name   = 'play_view-gameover',
-		}
-		self:dispatchEvent( event )
-	end
-end
 
 function self.refresh(dist)
 	obj.dist.text = dist
@@ -88,14 +93,12 @@ local function jumpEnd()
 end
 
 function self.jump()
-	transition.to( obj.player, { y = 500, transition = easing.continuousLoop, onStart = jumpStart, onComplete = jumpEnd, time = 1000 } )
+	transition.to( obj.player, { y = 500, transition = easing.continuousLoop, onStart = jumpStart, onComplete = jumpEnd, time = 200 } )
 -- obj.player.y = 500
 end
 
 
 function self.destroy()
-	transition.cancel()
-    timer.cancel(obj.timer)
 	if obj.group then
 		local function remove()
 			display.remove( obj.group )
