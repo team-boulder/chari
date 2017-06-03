@@ -11,17 +11,17 @@ end
 --距離測定
 function self.distance()
     self.time = timer.performWithDelay(10,listener, -1)
-    local event =
+    --[[local event =
     {
         name = "play_model-distance",
-        dist = self.dist,
-        maxScore = playerInfoData['max_score']
+        dist = self.dist
     } 
-    self:dispatchEvent( event )
+    self:dispatchEvent( event )]]--
 end
 
 --タイマーストップ
 function self.stopTimer()
+    self.dist = 0
     timer.cancel(self.time)
 end
 

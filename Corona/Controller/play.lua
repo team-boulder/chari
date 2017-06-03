@@ -37,6 +37,7 @@ end
 
 function scene:willEnterScene( event )
 	local group = self.view
+	play_model.distance()
 
 	--user_model:addEventListener( modelHandler )
 	play_view:addEventListener( viewHandler )
@@ -51,6 +52,8 @@ function scene:enterScene( event )
 end
 
 function scene:exitScene( event )
+	play_model.scoreSave()
+	play_model.stopTimer()
 	local group = self.view
 
 	--user_model:removeEventListener( modelHandler )
