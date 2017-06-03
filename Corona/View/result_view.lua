@@ -16,6 +16,11 @@ function self.create( params )
     obj.gameover.x = _W/2
     obj.gameover.value = "game"
 
+    obj.deadman = display.newImage(ImgDir .. "result/dead.png")
+    obj.deadman:setReferencePoint(display.CenterReferencePoint)
+	obj.deadman.x = _W/2
+	obj.deadman.y = _H/2
+    
     obj.score = display.newText("score: "..score, 0,_H/2 + 100,nil,60)
     obj.score:setFillColor(255,0,0)
     obj.score:setReferencePoint(display.CenterReferencePoint)
@@ -28,6 +33,7 @@ function self.create( params )
 
     obj.group:addEventListener('tap',self.tap)
     obj.group:insert(obj.bg)
+    obj.group:insert(obj.deadman)
     obj.group:insert(obj.momiji)
     obj.group:insert(obj.score)
     obj.group:insert(obj.gameover)
