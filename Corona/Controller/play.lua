@@ -4,9 +4,12 @@ local scene = storyboard.newScene()
 -- require view
 local play_view = require( ViewDir .. 'play_view' )
 local home_view = require( ViewDir .. 'home_view' )
+local play_model = require( ModelDir .. 'play_model' )
 
 local tapcount = 0
 local count = 0
+
+play_model.distance()
 local function viewHandler( event )
 	if event.name == 'play_view-tap' then
 
@@ -17,6 +20,8 @@ local function viewHandler( event )
 		if event.value == 'shop' then
 			print('Hello')
 			storyboard.gotoScene(ContDir..'home')
+			play_model.stopTimer()
+			play_model.scoreSave()
 		end
 		if event.value == 'jumpjump' then
 			count = count + 1

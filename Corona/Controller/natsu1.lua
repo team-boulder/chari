@@ -10,7 +10,6 @@ local tapCount = 0
 
 local function viewHandler( event )
 	if event.name == 'natsu_view-tap1' then
-
 		if event.value == 'back' then
 			--tapCount = 0
 			storyboard.gotoScene(ContDir..'home')

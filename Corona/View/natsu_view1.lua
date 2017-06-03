@@ -6,7 +6,7 @@ local physics = require('physics')
 local obj = {}
 
 local function googleListener(event)
-	print(event.response)
+	--print(event.response)
 	local data = json.decode(event.response)
 	local textX = 0
 	for k, v in pairs(data) do
