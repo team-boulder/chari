@@ -9,6 +9,8 @@ function self.create()
 		obj.group = display.newGroup()
 	-- end
 
+	obj.Landscape = require( ViewDir .. 'background' )
+	obj.landscape = obj.Landscape.create()
     obj.bg = display.newRect(0,0,_W,_H)
     obj.bg:setFillColor(255,255,255)
 	obj.bg.value = 'bg'
@@ -38,6 +40,7 @@ function self.create()
     obj.title:addEventListener('tap',self.tap)
     obj.bg:addEventListener('tap',self.tap)
     obj.group:insert( obj.bg )
+    obj.group:insert( obj.landscape )
     obj.group:insert( obj.title )
     obj.group:insert( obj.ground )
     obj.group:insert( obj.player )
