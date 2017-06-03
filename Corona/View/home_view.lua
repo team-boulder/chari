@@ -7,10 +7,11 @@ local tableData = {
 	{ label = '熊川', value = 'play' },
 	{ label = '前原', value = 'mae' },
 }
--- local themeColor = {120,230,240}
+local TextColor = {0,0,0}
 
-local themeColor = playerInfoData['theme_color']
-local headerSize = 100
+local themeColor = {255,255,255}
+--playerInfoData['theme_color']
+local headerSize = 300
 local boxSize = 100
 
 local function createContent(str)
@@ -19,11 +20,7 @@ local function createContent(str)
 	local box = display.newRect(group,0,0,_W,boxSize)
 	box:setStrokeColor(220)
 	box.strokeWidth = 2
-	local text = display.newText(group,str,50,0,'Noto-Light.otf',35)
-	text:setReferencePoint(display.CenterReferencePoint)
-	text.y = box.height/2
-	text:setFillColor(80)
-
+	
 	function box:touch(event)
 		if event.phase == "began" then
 			self:setFillColor(unpack(themeColor))
@@ -40,13 +37,68 @@ function self.create()
 	if obj.group == nil then
 		obj.group = display.newGroup()
 
-		obj.contentNum = 0
-		obj.header = display.newRect(0,0,_W,headerSize)
+		obj.scoreNum = playerInfoData['max_score']
+
+		-- tytle
+		obj.header = display.newRect(0,_H/5,_W,headerSize)
 		obj.header:setFillColor(unpack(themeColor))
-		obj.title = display.newText('   Coincheck',0,0,'Noto-Light.otf',35)
+		obj.title = display.newText('Season of チャリ走',0,0,'Noto-Midium.otf',60)
 		obj.title:setReferencePoint(display.CenterReferencePoint)
 		obj.title.x = _W/2
-		obj.title.y = obj.header.height/2
+		obj.title.y = _H/5 + headerSize/3
+		obj.title:setFillColor(unpack(TextColor))
+		obj.title2 = display.newText('~Presented team Boulder~',0,0,'Noto-Midium.otf',40)
+		obj.title2:setReferencePoint(display.CenterReferencePoint)
+		obj.title2.x = _W/2
+		obj.title2.y = _H/5 + headerSize*2/3
+		obj.title2:setFillColor(unpack(TextColor))
+
+		obj.title3 = display.newText('MaxScore：'..obj.scoreNum,0,0,'Noto-Midium.otf',50)
+		obj.title3:setReferencePoint(display.CenterReferencePoint)
+		obj.title3.x = _W/2
+		obj.title3.y = _H*5/7
+		obj.title3:setFillColor(unpack(themeColor))
+
+		obj.chari = display.newImage( ImgDir..'home/chari.png', 0, 0)
+   		obj.chari:scale(0.5,0.5)
+		obj.chari.x = _W/2
+    	obj.chari.y = _H*4/7
+
+		-- Startボタンの生成
+		obj.startButton = display.newGroup()
+		local circle = display.newCircle( obj.startButton, _W-150, _H-150, 100)
+		local plus = display.newText( obj.startButton, 'Start', 0, 0, nil, 70)
+		plus:setReferencePoint(display.CenterReferencePoint)
+		plus.x = circle.x
+		plus.y = circle.y
+		circle:setFillColor(255,50,50)
+		circle.fill.effect = "filter.bloom"
+		circle.fill.effect.levels.white = 0.2
+		circle.fill.effect.levels.black = 1.0
+		circle.fill.effect.levels.gamma = 0.2
+		obj.startButton:setReferencePoint(circle.x, circle.y)
+		obj.startButton.anim = true
+		obj.startButton.value = 'start'
+		obj.startButton:addEventListener('tap',self.tap)
+
+		-- Ruleボタンの生成
+		obj.ruleButton = display.newGroup()
+		local b_rule = display.newCircle( obj.ruleButton, 100, _H-100, 50)
+		local r_plus = display.newText( obj.ruleButton, 'Rule', 0, 0, nil, 40)
+		r_plus:setReferencePoint(display.CenterReferencePoint)
+		r_plus.x = b_rule.x
+		r_plus.y = b_rule.y
+		b_rule:setFillColor(50,50,255)
+		b_rule.fill.effect = "filter.bloom"
+		b_rule.fill.effect.levels.white = 0.2
+		b_rule.fill.effect.levels.black = 1.0
+		b_rule.fill.effect.levels.gamma = 0.2
+		obj.ruleButton:setReferencePoint(b_rule.x, b_rule.y)
+		obj.ruleButton.anim = true
+		obj.ruleButton.value = 'start'
+		obj.ruleButton:addEventListener('tap',self.tap)
+
+		--[[
 		obj.menu = display.newImage( ImgDir .. 'home/menu.png',30,30)
 		obj.menuArea = display.newRect(0,0,150,100)
 		obj.menuArea.value = 'menu'
@@ -63,7 +115,8 @@ function self.create()
         	scrollHeight = 80
 		})
 		obj.scrollView:setIsLocked( true, "horizontal" )
-
+--]]
+		--[[
 		-- 連想配列から取り出してテーブルを作成
 		for i,v in ipairs(tableData) do
 			obj[v.value] = createContent(v.label)
@@ -75,9 +128,9 @@ function self.create()
 		end
 
 		-- 追加ボタンの生成
-		obj.addButton = display.newGroup()
-		local circle = display.newCircle( obj.addButton, _W-100, _H-100, 50)
-		local plus = display.newText( obj.addButton, '＋', 0, 0, nil, 70)
+		obj.startButton = display.newGroup()
+		local circle = display.newCircle( obj.startButton, _W-100, _H-100, 50)
+		local plus = display.newText( obj.startButton, '＋', 0, 0, nil, 70)
 		plus:setReferencePoint(display.CenterReferencePoint)
 		plus.x = circle.x
 		plus.y = circle.y
@@ -86,10 +139,10 @@ function self.create()
 		circle.fill.effect.levels.white = 0.2
 		circle.fill.effect.levels.black = 1.0
 		circle.fill.effect.levels.gamma = 0.2
-		obj.addButton:setReferencePoint(circle.x, circle.y)
-		obj.addButton.anim = true
-		obj.addButton.value = 'add'
-		obj.addButton:addEventListener('tap',self.tap)
+		obj.startButton:setReferencePoint(circle.x, circle.y)
+		obj.startButton.anim = true
+		obj.startButton.value = 'add'
+		obj.startButton:addEventListener('tap',self.tap)
 
 		-- メニューを予め作成しておく
 		obj.menuGroup = display.newGroup()
@@ -150,60 +203,25 @@ function self.create()
 		obj.accept:addEventListener('tap',self.tap)
 		obj.popupGroup:insert(obj.textField)
 		obj.popupGroup.alpha = 0
-
-		obj.group:insert( obj.scrollView )
+--]]
+		--obj.group:insert( obj.scrollView )
 		obj.group:insert( obj.header )
 		obj.group:insert( obj.title )
-		obj.group:insert( obj.menu )
-		obj.group:insert( obj.menuArea )
-		obj.group:insert( obj.addButton )
-		obj.group:insert( obj.menuBG )
-		obj.group:insert( obj.menuGroup )
-		obj.group:insert( obj.popupGroup )
+		obj.group:insert( obj.title2 )
+		obj.group:insert( obj.title3 )
+		obj.group:insert( obj.chari )
+		--obj.group:insert( obj.menu )
+		--obj.group:insert( obj.menuArea )
+		obj.group:insert( obj.startButton )
+		obj.group:insert( obj.ruleButton )
+		--obj.group:insert( obj.menuBG )
+		--obj.group:insert( obj.menuGroup )
+		--obj.group:insert( obj.popupGroup )
 
 		return obj.group
 	end
 end
 
-function self.showMenu()
-	transition.to( obj.menuGroup, { time = 150, alpha = 1, x = 0 } )
-	transition.to( obj.menuBG, { time = 150, alpha = 1 } )
-end
-
-function self.hideMenu()
-	transition.to( obj.menuGroup, { time = 150, alpha = 0, x = -400 } )
-	transition.to( obj.menuBG, { time = 150, alpha = 0 } )
-end
-
-function self.showPopup()
-	transition.to( obj.popupGroup, { time = 150, alpha = 1 } )
-	obj.textField.isVisible = true
-end
-
-function self.hidePopup()
-	transition.to( obj.popupGroup, { time = 150, alpha = 0 } )
-	obj.textField.isVisible = false
-end
-
-function self.addLabel()
-	local content = createContent(obj.textField.text)
-	content.y = headerSize + obj.contentNum * boxSize
-	content.value = 'temp'
-	content.text = obj.textField.text
-	content:addEventListener('tap',self.tap)
-	obj.scrollView:insert(content)
-	obj.contentNum = obj.contentNum + 1
-	self.hidePopup()
-	obj.textField.text = ''
-end
-
-function self.checkText()
-	if obj.textField.text == '' then
-		return false
-    else
-		return true
-    end
-end
 
 function self.destroy()
 	if obj.group then
