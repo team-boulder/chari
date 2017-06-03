@@ -4,7 +4,7 @@ local obj = {}
 local tableData = {
 	{ label = '夏山', value = 'natsu' },
 	{ label = '芝',   value = 'shiba' },
-	{ label = '熊川', value = 'kuma' },
+	{ label = '熊川', value = 'play' },
 	{ label = '前原', value = 'mae' },
 }
 -- local themeColor = {120,230,240}

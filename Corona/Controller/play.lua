@@ -1,25 +1,28 @@
 local scene = storyboard.newScene()
 
---Kumakawa
+--playkawa
 -- require view
-local kuma_view = require( ViewDir .. 'kuma_view' )
+local play_view = require( ViewDir .. 'play_view' )
 local home_view = require( ViewDir .. 'home_view' )
 
 local tapcount = 0
+local count = 0
 local function viewHandler( event )
-	if event.name == 'kuma_view-tap' then
+	if event.name == 'play_view-tap' then
 
-		if event.value == 'rect' then
-			storyboard.gotoScene(ContDir..'home')
+		if event.value == 'bg' then
+			play_view.jump()
         end
 
 		if event.value == 'shop' then
 			print('Hello')
 			storyboard.gotoScene(ContDir..'home')
 		end
-		if event.value == 'Noback' then
-			kuma_view.puni()
-			kuma_view.reflesh()
+		if event.value == 'jumpjump' then
+			count = count + 1
+			if count == 1 then
+			play_view.jump()
+			end
 			-- print(tapcount)
 		end
 
@@ -34,9 +37,9 @@ function scene:willEnterScene( event )
 	local group = self.view
 
 	--user_model:addEventListener( modelHandler )
-	kuma_view:addEventListener( viewHandler )
+	play_view:addEventListener( viewHandler )
 	playerInfoData['age'] = playerInfoData['age'] - 0.2
-	local view_obj = kuma_view.create()
+	local view_obj = play_view.create()
 	group:insert( view_obj )
 
 end
@@ -49,9 +52,9 @@ function scene:exitScene( event )
 	local group = self.view
 
 	--user_model:removeEventListener( modelHandler )
-	kuma_view:removeEventListener( viewHandler )
+	play_view:removeEventListener( viewHandler )
 
-	kuma_view.destroy()
+	play_view.destroy()
 
 end
 
