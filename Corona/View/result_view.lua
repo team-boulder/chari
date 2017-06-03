@@ -6,6 +6,10 @@ function self.create()
 	-- if obj.group == nil then
 	obj.group = display.newGroup()
     local score = 0
+
+    obj.bg = display.newRect(0,0,_W,_H)
+    obj.bg:setFillColor(0)
+
     obj.gameover = display.newText("GAME OVER",0,_H/2,nil,80)
     obj.gameover:setFillColor(255,0,0)
     obj.gameover:setReferencePoint(display.CenterReferencePoint)
@@ -18,11 +22,23 @@ function self.create()
     obj.score.x = _W/2
     obj.score.value = "score"
     
+    obj.group:addEventListener('tap',self.tap)
+    obj.group:insert(obj.bg)
     obj.group:insert(obj.score)
     obj.group:insert(obj.gameover)
 	-- end
     return obj.group
 end
+
+function self.tap( e )
+    local event = 
+    {
+        name  = "result_view-tap",
+        value = e.target.value,
+    }
+    self:dispatchEvent( event )
+    return true
+end 
 
 
 function self.destroy()
