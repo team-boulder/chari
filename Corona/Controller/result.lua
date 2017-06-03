@@ -2,33 +2,15 @@ local scene = storyboard.newScene()
 
 --playkawa
 -- require view
-local play_view = require( ViewDir .. 'play_view' )
-local home_view = require( ViewDir .. 'home_view' )
-local play_model = require( ModelDir .. "play_model")
+local result_view = require( ViewDir .. 'result_view' )
 
-local tapcount = 0
-local count = 0
+
 
 local function viewHandler( event )
-	if event.name == 'play_view-tap' then
-
-		if event.value == 'bg' then
-			play_view.jump()
-        end
-
-		if event.value == 'shop' then
-			print('Hello')
-			storyboard.gotoScene(ContDir..'result', {params = {score = play_model.dist or 0}})
-		end
-		if event.value == 'jumpjump' then
-			count = count + 1
-			if count == 1 then
-			play_view.jump()
-			end
-			-- print(tapcount)
-		end
-
+	if event.name == "result_view-tap" then
+		storyboard.gotoScene(ContDir..'home')
 	end
+
 end
 
 function scene:createScene( event )
@@ -37,14 +19,10 @@ end
 
 function scene:willEnterScene( event )
 	local group = self.view
-	play_model.distance()
+	result_view:addEventListener( viewHandler )
 
-	--user_model:addEventListener( modelHandler )
-	play_view:addEventListener( viewHandler )
-	playerInfoData['age'] = playerInfoData['age'] - 0.2
-	local view_obj = play_view.create()
-	group:insert( view_obj )
-
+	local result_obj = result_view.create(event.params)
+	group:insert( result_obj )
 end
 
 function scene:enterScene( event )
@@ -52,14 +30,10 @@ function scene:enterScene( event )
 end
 
 function scene:exitScene( event )
-	play_model.scoreSave()
-	play_model.stopTimer()
-	local group = self.view
+	local group = self.view 
+    result_view:removeEventListener( viewHandler )
 
-	--user_model:removeEventListener( modelHandler )
-	play_view:removeEventListener( viewHandler )
-
-	play_view.destroy()
+	result_view.destroy()
 
 end
 
