@@ -19,7 +19,7 @@ local not_require = {}
 
 -- initialize
 local function init()
-	for i=1,3 do
+	for i=1,6 do
 		if table.search(i, not_require) == false then
 			local filePath = system.pathForFile( "Emitter/"..i..".json" )
 			local f = io.open( filePath, "r" )
