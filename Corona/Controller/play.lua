@@ -11,20 +11,29 @@ local count = 0
 
 
 local function modelHandler( event )
-	print("get model event")
+	if event.name == 'play_model-bool' then
+		play_view.createBlock() 
+	end
 	if event.name == 'play_model-distance' then
-		print(event)
 		play_view.refresh( event.dist ) 
 	end
 end
 
 
 local function viewHandler( event )
+	if event.name == 'play_view-gameover' then
+		storyboard.gotoScene(ContDir..'result', {params = {score = play_model.dist or 0}})
+	end
 	if event.name == 'play_view-tap' then
 
 		if event.value == 'bg' then
 			play_view.jump()
         end
+
+		if event.value == 'shop' then
+			print('Hello')
+			storyboard.gotoScene(ContDir..'result', {params = {score = play_model.dist or 0}})
+		end
 
 		if event.value == 'shop' then
 			print('Hello')
@@ -47,7 +56,7 @@ end
 
 function scene:willEnterScene( event )
 	local group = self.view
-	play_model.distance()
+	play_model.init()
 
 	play_model:addEventListener( modelHandler )
 	play_view:addEventListener( viewHandler )
