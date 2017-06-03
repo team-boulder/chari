@@ -1,5 +1,5 @@
-# SampleCorona2
-- CoronaSDKとgitの使い方に慣れよう  
+# チャリ走
+- spajamシミュレーション第一弾
 
 ## gitの操作
 ### クローン
