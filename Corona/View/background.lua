@@ -17,7 +17,7 @@ function self.create()
 		    obj.bg:setFillColor(144,144,144)
 			obj.snow = display.newEmitter( emitter.params[4] )
 			obj.snow.x = _W/2
-			obj.snow.y = 100
+			obj.snow.y = 0
 			obj.group:insert( obj.snow ) 
 		elseif rand == 2 then
 			obj.bg:setFillColor(234,145,152)
