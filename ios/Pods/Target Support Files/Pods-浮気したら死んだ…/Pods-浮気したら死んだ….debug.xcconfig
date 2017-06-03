@@ -1,0 +1,9 @@
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Nex8Tracking/Nex8Tracking-1.1.2"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AWSCore" "${PODS_ROOT}/Headers/Public/AWSKinesis" "${PODS_ROOT}/Headers/Public/FyberSDK" "${PODS_ROOT}/Headers/Public/Nex8Tracking"
+LIBRARY_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/AWSCore" "$PODS_CONFIGURATION_BUILD_DIR/AWSKinesis" $(inherited) "${PODS_ROOT}/FyberSDK/Fyber_iOS_SDK_v.8.3.1/fyber-sdk-lib"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AWSCore" -isystem "${PODS_ROOT}/Headers/Public/AWSKinesis" -isystem "${PODS_ROOT}/Headers/Public/FyberSDK" -isystem "${PODS_ROOT}/Headers/Public/Nex8Tracking"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"AWSCore" -l"AWSKinesis" -l"FyberSDK-8.3.1" -l"sqlite3" -l"z" -framework "AdSupport" -framework "CoreGraphics" -framework "CoreLocation" -framework "CoreTelephony" -framework "Foundation" -framework "MediaPlayer" -framework "Nex8Tracking" -framework "QuartzCore" -framework "SafariServices" -framework "SystemConfiguration" -framework "UIKit" -weak_framework "AdSupport" -weak_framework "StoreKit"
+PODS_BUILD_DIR = $BUILD_DIR
+PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_ROOT = ${SRCROOT}/Pods

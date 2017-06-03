@@ -1,0 +1,16 @@
+workspace 'App'
+project 'App.xcodeproj'
+project 'PluginFyber.xcodeproj'
+
+target 'plugin_fyber' do
+  platform :ios, '7.0' 
+  pod 'FyberSDK', '~> 8.0'
+  project 'PluginFyber.xcodeproj'
+end
+
+target '浮気したら死んだ…' do
+  platform :ios, '7.0' 
+  pod 'Nex8Tracking'
+  pod 'FyberSDK', '~> 8.0'
+  project 'App.xcodeproj'
+end

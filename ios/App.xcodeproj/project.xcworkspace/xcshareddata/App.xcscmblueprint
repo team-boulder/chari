@@ -1,0 +1,51 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "6A128738FD8999188FB9B402DF1C333D3ACFEA11",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "A9EE7D79D817960E3515B50DD1DE9E84AA0E7950" : 0,
+    "2BDCACE0CC81CD3B9FF71F80F29603CD737AC4E9" : 0,
+    "6A128738FD8999188FB9B402DF1C333D3ACFEA11" : 0,
+    "30049880219574E9BB7C89FA598B6FB2AAD28754" : 0,
+    "34FDE34B444C3D918E80EDE17ED19417047DEA87" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "AE909293-0234-49FB-B06A-8BAD31E547C0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A9EE7D79D817960E3515B50DD1DE9E84AA0E7950" : "coronasdk_native\/",
+    "2BDCACE0CC81CD3B9FF71F80F29603CD737AC4E9" : "mrd\/",
+    "6A128738FD8999188FB9B402DF1C333D3ACFEA11" : "cosmo\/",
+    "30049880219574E9BB7C89FA598B6FB2AAD28754" : "oreshinda_native\/",
+    "34FDE34B444C3D918E80EDE17ED19417047DEA87" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "App",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ios\/App.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/afreep\/mrd.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2BDCACE0CC81CD3B9FF71F80F29603CD737AC4E9"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/afreep\/oreshinda.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "30049880219574E9BB7C89FA598B6FB2AAD28754"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/afreep\/matching_base.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "34FDE34B444C3D918E80EDE17ED19417047DEA87"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/afreep\/cosmo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6A128738FD8999188FB9B402DF1C333D3ACFEA11"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/afreep\/coronasdk_native.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A9EE7D79D817960E3515B50DD1DE9E84AA0E7950"
+    }
+  ]
+}

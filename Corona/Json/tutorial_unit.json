@@ -1,0 +1,143 @@
+{
+    "cost": 9, 
+    "crystal": 1, 
+    "exp": 1, 
+    "first": {
+        "attack": 11, 
+        "attribute_type": "f", 
+        "cost": 1, 
+        "cure": 11, 
+        "d": 10, 
+        "detail": "詳細１追記", 
+        "f": 40, 
+        "hp": 41, 
+        "id": 1, 
+        "image": [
+            "http://app.talkspace-web.com/cosmo/character/tmp_20160909-ssr-001-02.png", 
+            "http://app.talkspace-web.com/cosmo/character/tmp_20160909-ssr-001-01.png", 
+            "http://app.talkspace-web.com/cosmo/character/tmp_20160909-ssr-001-03.png"
+        ], 
+        "l": 10, 
+        "leader": true, 
+        "level": 1, 
+        "max_level": 99, 
+        "name": "キャラ１", 
+        "order": 1, 
+        "own_chara_id": 542, 
+        "p": 10, 
+        "skill": [
+            {
+                "cost": 10, 
+                "duration": 3, 
+                "operate": "manual", 
+                "rate": 1.2, 
+                "type": "attack"
+            }
+        ], 
+        "thumbnail": "http://app.talkspace-web.com/cosmo/character/tmp_20160908-001.png", 
+        "w": 10
+    }, 
+    "fourth": {
+        "attack": 11, 
+        "attribute_type": "l", 
+        "cost": 3, 
+        "cure": 11, 
+        "d": 10, 
+        "detail": "詳細４", 
+        "f": 10, 
+        "hp": 211, 
+        "id": 4, 
+        "image": [
+            "http://app.talkspace-web.com/cosmo/character/tmp_20160912-n-002-01.png", 
+            "http://app.talkspace-web.com/cosmo/character/tmp_20160912-n-002-02.png"
+        ], 
+        "l": 100, 
+        "level": 1, 
+        "max_level": 99, 
+        "name": "キャラ４", 
+        "order": 4, 
+        "own_chara_id": 545, 
+        "p": 10, 
+        "skill": [
+            {
+                "cost": 10, 
+                "duration": 3, 
+                "operate": "manual", 
+                "rate": 2, 
+                "type": "cure"
+            }
+        ], 
+        "thumbnail": "http://app.talkspace-web.com/cosmo/character/tmp_20160908-004.png", 
+        "w": 10
+    }, 
+    "hp": 374, 
+    "leader_detail": "キャラの攻撃力が1.3倍になる", 
+    "leader_name": "Lスキル１", 
+    "level": 1, 
+    "second": {
+        "attack": 11, 
+        "attribute_type": "w", 
+        "cost": 2, 
+        "cure": 11, 
+        "d": 10, 
+        "detail": "詳細２", 
+        "f": 10, 
+        "hp": 21, 
+        "id": 2, 
+        "image": [
+            "http://app.talkspace-web.com/cosmo/character/tmp_20160909-n-001-01.png", 
+            "http://app.talkspace-web.com/cosmo/character/tmp_20160909-n-001-02.png"
+        ], 
+        "l": 10, 
+        "level": 1, 
+        "max_level": 99, 
+        "name": "キャラ２", 
+        "order": 2, 
+        "own_chara_id": 543, 
+        "p": 10, 
+        "skill": [
+            {
+                "cost": 10, 
+                "duration": 3, 
+                "operate": "manual", 
+                "rate": 1.2, 
+                "type": "judge"
+            }
+        ], 
+        "thumbnail": "http://app.talkspace-web.com/cosmo/character/tmp_20160908-002.png", 
+        "w": 100
+    }, 
+    "third": {
+        "attack": 11, 
+        "attribute_type": "p", 
+        "cost": 3, 
+        "cure": 11, 
+        "d": 10, 
+        "detail": "詳細３", 
+        "f": 10, 
+        "hp": 101, 
+        "id": 3, 
+        "image": [
+            "http://app.talkspace-web.com/cosmo/character/tmp_20160912-n-001-01.png", 
+            "http://app.talkspace-web.com/cosmo/character/tmp_20160912-n-001-02.png"
+        ], 
+        "l": 10, 
+        "level": 1, 
+        "max_level": 99, 
+        "name": "キャラ３", 
+        "order": 3, 
+        "own_chara_id": 544, 
+        "p": 100, 
+        "skill": [
+            {
+                "cost": 10, 
+                "duration": 10, 
+                "operate": "manual", 
+                "rate": 1.2, 
+                "type": "defense"
+            }
+        ], 
+        "thumbnail": "http://app.talkspace-web.com/cosmo/character/tmp_20160908-003.png", 
+        "w": 10
+    }
+}

@@ -1,0 +1,126 @@
+[
+    {
+        "id": 0, 
+        "unlock": 1, 
+        "title": "彼女が死んだ",
+        "ss_id" : 1
+    },
+    {
+        "id": 1, 
+        "unlock": 0, 
+        "title": "謎の少女", 
+        "ss_id" : 4
+    }, 
+    {
+        "id": 2, 
+        "unlock": 0, 
+        "title": "忍び寄る影", 
+        "ss_id" : 4
+    }, 
+    {
+        "id": 3, 
+        "unlock": 0, 
+        "title": "夢であえたね", 
+        "ss_id" : 5
+    }, 
+    {
+        "id": 4, 
+        "unlock": 0, 
+        "title": "ストーカー始めます", 
+        "ss_id" : 5
+    }, 
+    {
+        "id": 5, 
+        "unlock": 0, 
+        "title": "命日", 
+        "ss_id" : 6
+    }, 
+    {
+        "id": 6, 
+        "unlock": 0, 
+        "title": "親友のユウマ", 
+        "ss_id" : 6
+    }, 
+    {
+        "id": 7, 
+        "unlock": 0, 
+        "title": "確保寸前", 
+        "ss_id" : 7
+    }, 
+    {
+        "id": 8, 
+        "unlock": 0, 
+        "title": "影の正体", 
+        "ss_id" : 7
+    }, 
+    {
+        "id": 9, 
+        "unlock": 0, 
+        "title": "写真と殺人", 
+        "ss_id" : 8
+    }, 
+    {
+        "id": 10, 
+        "unlock": 0, 
+        "title": "ヒメゴト", 
+        "ss_id" : 8
+    }, 
+    {
+        "id": 11, 
+        "unlock": 0, 
+        "title": "４人目", 
+        "ss_id" : 9
+    }, 
+    {
+        "id": 12, 
+        "unlock": 0, 
+        "title": "アイちゃん", 
+        "ss_id" : 9
+    }, 
+    {
+        "id": 13, 
+        "unlock": 0, 
+        "title": "アイのため", 
+        "ss_id" : 10
+    }, 
+    {
+        "id": 14, 
+        "unlock": 0, 
+        "title": "ユウマの告白", 
+        "ss_id" : 10
+    }, 
+    {
+        "id": 15, 
+        "unlock": 0, 
+        "title": "ツグミの告白", 
+        "ss_id" : 10
+    }, 
+    {
+        "id": 16, 
+        "unlock": 0, 
+        "title": "ありがとう",
+        "ss_id" : 11,
+        "conditions" : "ステージ16の選択で解放できるストーリーです。"
+    },
+    {
+        "id": 17, 
+        "unlock": 0, 
+        "title": "しあわせ",
+        "ss_id" : 1,
+        "conditions" : "ステージ16の選択で解放できるストーリーです。"
+    }, 
+    {
+        "id": 18, 
+        "unlock": 0, 
+        "title": "さようなら",
+        "ss_id" : 1,
+        "conditions" : "ステージ16の選択で解放できるストーリーです。"
+    },
+    {
+        "id": 19, 
+        "unlock": 1, 
+        "title": "浮気をしない明日",
+        "ss_id" : 1,
+        "app_id" : 20160206
+    }
+]

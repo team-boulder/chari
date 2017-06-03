@@ -1,0 +1,21 @@
+/Users/freep/Desktop/freep/usotsuki/android/bin/classes.dex : \
+/Users/freep/Desktop/freep/usotsuki/android/bin/classes/com/ansca/corona/R$drawable.class \
+/Users/freep/Desktop/freep/usotsuki/android/bin/classes/com/ansca/corona/R$raw.class \
+/Users/freep/Desktop/freep/usotsuki/android/bin/classes/com/ansca/corona/R.class \
+/Users/freep/Desktop/freep/usotsuki/android/bin/classes/com/mycompany/app/BuildConfig.class \
+/Users/freep/Desktop/freep/usotsuki/android/bin/classes/com/mycompany/app/CoronaApplication$1.class \
+/Users/freep/Desktop/freep/usotsuki/android/bin/classes/com/mycompany/app/CoronaApplication$CoronaRuntimeEventHandler.class \
+/Users/freep/Desktop/freep/usotsuki/android/bin/classes/com/mycompany/app/CoronaApplication.class \
+/Users/freep/Desktop/freep/usotsuki/android/bin/classes/com/mycompany/app/R$attr.class \
+/Users/freep/Desktop/freep/usotsuki/android/bin/classes/com/mycompany/app/R$drawable.class \
+/Users/freep/Desktop/freep/usotsuki/android/bin/classes/com/mycompany/app/R$raw.class \
+/Users/freep/Desktop/freep/usotsuki/android/bin/classes/com/mycompany/app/R.class \
+/Users/freep/Desktop/freep/usotsuki/android/bin/classes/plugin/library/LuaLoader$1$1.class \
+/Users/freep/Desktop/freep/usotsuki/android/bin/classes/plugin/library/LuaLoader$1.class \
+/Users/freep/Desktop/freep/usotsuki/android/bin/classes/plugin/library/LuaLoader$InitWrapper.class \
+/Users/freep/Desktop/freep/usotsuki/android/bin/classes/plugin/library/LuaLoader$ShowWrapper.class \
+/Users/freep/Desktop/freep/usotsuki/android/bin/classes/plugin/library/LuaLoader.class \
+/Users/freep/Desktop/freep/usotsuki/android/bin/dexedLibs/classes-9023e61488191619fca3c4486ebacb18.jar \
+/Users/freep/Desktop/freep/usotsuki/android/bin/dexedLibs/JNLua-b11eae511c170ddd0d41760fe8506a8a.jar \
+/Users/freep/Desktop/freep/usotsuki/android/bin/dexedLibs/network-c73d956bee50e67e52636c67ae4c722b.jar \
+/Users/freep/Desktop/freep/usotsuki/android/bin/dexedLibs/Corona-2df7050299f0a2186de60f3be677bf33.jar \

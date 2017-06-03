@@ -1,0 +1,181 @@
+--
+-- For more information on build.settings see the Corona SDK Build Guide at:
+-- http://docs.coronalabs.com/guide/distribution/buildSettings/index.html
+--
+
+settings =
+{
+    plugins =
+    {
+        ["CoronaProvider.native.popup.social"] =
+        {
+            publisherId = "com.coronalabs"
+        },
+        ["plugin.flurry.analytics"] =
+        {
+            publisherId = "com.coronalabs",
+        },
+        ["plugin.google.play.services"] =
+        {
+            publisherId = "com.coronalabs"
+        },
+        ["plugin.notifications"] =
+        {
+            publisherId = "com.coronalabs"
+        },
+        ["plugin.OneSignal"] =
+        {
+            publisherId = "com.onesignal",
+        },
+		["plugin.google.iap.v3"] =
+		{
+			publisherId = "com.coronalabs",
+			supportedPlatforms = { android=true }
+		},
+        ["plugin.applovin"] =
+        {
+            publisherId = "com.coronalabs",
+            supportedPlatforms = { iphone = true, android = true, appletvos = true, ["iphone-sim"]=true }
+        },
+        ["CoronaProvider.ads.vungle"] =
+        {
+            publisherId = "com.vungle"
+        },
+        ["shared.android.support.v4"] =
+        {
+          publisherId = "com.coronalabs",
+          supportedPlatforms = { android=true }
+        },
+        ["plugin.chartboost"] =
+        {
+            publisherId = "com.coronalabs"
+        },
+        ["plugin.coronaAds"] =
+        {
+          publisherId = "com.coronalabs",
+        },
+        ["plugin.adcolony"] =
+        {
+          publisherId = "com.coronalabs",
+        },
+        ["plugin.pasteboard"] =
+        {
+            publisherId = "com.coronalabs",
+        },
+    },
+	orientation =
+	{
+		-- Supported values for orientation:
+		-- portrait, portraitUpsideDown, landscapeLeft, landscapeRight
+		default = "portrait",
+		supported = { "portrait", }
+	},
+	excludeFiles =
+	{
+		-- Include only the necessary icon files on each platform
+		iphone = { "Icon-*dpi.png", },
+		android = { "Icon.png", "Icon-Small-*.png", "Icon*@2x.png", },
+	},
+
+	--
+	-- iOS Section
+	--
+	iphone =
+	{
+		plist =
+		{
+			UIStatusBarHidden = false,
+			UIPrerenderedIcon = true, -- set to false for "shine" overlay
+			--UIApplicationExitsOnSuspend = true, -- uncomment to quit app on suspend
+			UIBackgroundModes = {"remote-notification"},
+            NSCalendarsUsageDescription = "Testing",
+            NSPhotoLibraryUsageDescription = "Testing",
+            NSCameraUsageDescription = "Testing",
+			CFBundleIconFiles =  
+			{
+				"Icon.png",
+				"Icon@2x.png",
+				"Icon-60.png",
+				"Icon-60@2x.png",
+				"Icon-60@3x.png",
+				"Icon-72.png",
+				"Icon-72@2x.png",
+				"Icon-76.png",
+				"Icon-76@2x.png",
+				"Icon-Small.png",
+				"Icon-Small@2x.png",
+				"Icon-Small@3x.png",
+				"Icon-Small-40.png",
+				"Icon-Small-40@2x.png",
+				"Icon-Small-50.png",
+				"Icon-Small-50@2x.png",
+			},
+			-- iOS app URL schemes:
+            CFBundleURLTypes =
+            {
+                {
+                    CFBundleURLSchemes =
+                    {
+                        -- "fb309081365879911", -- example scheme for facebook
+                        "cosmo", -- example second scheme
+                    }
+                }
+            },
+            -- ATS 対策
+			NSAppTransportSecurity =
+			{
+			    NSAllowsArbitraryLoads = true,
+			},
+            -- iOS 10 対策
+            NSCalendarsUsageDescription = "Testing",
+            NSPhotoLibraryUsageDescription = "Testing",
+            NSCameraUsageDescription = "Testing"            
+		}
+	},
+
+	--
+	-- Android Section
+	--
+	android =
+	{
+		versionCode = "1",
+        permissions =
+        {
+            { name = ".permission.C2D_MESSAGE", protectionLevel = "signature" },
+        },
+		usesPermissions =
+		{
+			"android.permission.INTERNET",
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            "com.google.android.c2dm.permission.RECEIVE",
+            ".permission.C2D_MESSAGE",
+            "android.permission.ACCESS_FINE_LOCATION",
+            "android.permission.ACCESS_COARSE_LOCATION",
+            "android.permission.ACCESS_NETWORK_STATE",
+            "com.android.vending.BILLING",
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            "android.permission.VIBRATE",
+        },
+	    intentFilters =
+	    {
+	        {
+	            label = "Optional Title Goes Here",
+	            actions = { "android.intent.action.VIEW" },
+	            categories =
+	            {
+	            	"android.intent.category.DEFAULT",
+	            	"android.intent.category.BROWSABLE",
+	            },
+	            data = { scheme = "cosmo" },
+	        },
+	    },
+        usesFeatures =
+        {
+            -- If you set permissions "ACCESS_FINE_LOCATION" and "ACCESS_COARSE_LOCATION" above,
+            -- you should set the app to NOT require location services:
+            { name="android.hardware.location", required=false },
+            { name="android.hardware.location.gps", required=false },
+            { name="android.hardware.location.network", required=false },
+        },
+	},
+}

@@ -1,0 +1,22 @@
+PODS:
+  - AWSCore (2.3.6)
+  - AWSKinesis (2.3.6):
+    - AWSCore (= 2.3.6)
+  - FyberSDK (8.3.1)
+  - Nex8Tracking (1.1.2):
+    - AWSCore
+    - AWSKinesis
+
+DEPENDENCIES:
+  - FyberSDK (~> 8.0)
+  - Nex8Tracking
+
+SPEC CHECKSUMS:
+  AWSCore: 917d84b32974136194a905b98c0ae25c9f3350b8
+  AWSKinesis: 89c0042637c088ba54f2bb892d285693b44d93e8
+  FyberSDK: ee9044cd1177635677dfe99b01fe2d5ef95691e3
+  Nex8Tracking: 9d40b4e0c8cce7c5ca4365d59d1bc29942f94b70
+
+PODFILE CHECKSUM: 7a89b0428a88e93746ea032f60286f55073476d6
+
+COCOAPODS: 1.0.1

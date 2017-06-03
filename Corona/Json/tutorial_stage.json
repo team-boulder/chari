@@ -1,0 +1,196 @@
+[
+    {
+        "artist": "Tutorial", 
+        "bpm": 120, 
+        "drop": [
+            {
+                "rate": 0.3, 
+                "type": "exp", 
+                "value": 10
+            }, 
+            {
+                "rate": 0.3, 
+                "type": "crystal", 
+                "value": 10
+            }, 
+            {
+                "rate": 0.4, 
+                "type": "level", 
+                "value": 10
+            }
+        ], 
+        "enemy": 100, 
+        "enemy_attack": 1, 
+        "exp": 1, 
+        "id": -1, 
+        "image": "http://app.talkspace-web.com/side/cosmo/assets/pl_image_001.jpg", 
+        "lane1": {
+            "d": 0, 
+            "f": 0, 
+            "l": 0, 
+            "p": 0, 
+            "s": 0, 
+            "w": 0
+        }, 
+        "lane2": {
+            "d": 0, 
+            "f": 0, 
+            "l": 0, 
+            "p": 0, 
+            "s": 0, 
+            "w": 0
+        }, 
+        "lane3": {
+            "d": 0, 
+            "f": 0, 
+            "l": 0, 
+            "p": 0, 
+            "s": 0, 
+            "w": 0
+        }, 
+        "lane4": {
+            "d": 0, 
+            "f": 0, 
+            "l": 0, 
+            "p": 0, 
+            "s": 0, 
+            "w": 0
+        }, 
+        "_notes": "local://MIDI/long_tutorial.mid", 
+        "notes": "local://MIDI/single_tutorial.mid", 
+        "reward": "{\"crystal\":\"100\",\"growth_point\":\"30\"}", 
+        "sound": "local://Audio/bgm/tuning.mp3", 
+        "stamina": 1, 
+        "title": "Tutorial", 
+        "tune_id": -1
+    },
+    {
+        "artist": "Tutorial", 
+        "bpm": 120, 
+        "drop": [
+            {
+                "rate": 0.3, 
+                "type": "exp", 
+                "value": 10
+            }, 
+            {
+                "rate": 0.3, 
+                "type": "crystal", 
+                "value": 10
+            }, 
+            {
+                "rate": 0.4, 
+                "type": "level", 
+                "value": 10
+            }
+        ], 
+        "enemy": 100, 
+        "enemy_attack": 1, 
+        "exp": 1, 
+        "id": -1, 
+        "image": "http://app.talkspace-web.com/side/cosmo/assets/pl_image_001.jpg", 
+        "lane1": {
+            "d": 0, 
+            "f": 0, 
+            "l": 0, 
+            "p": 0, 
+            "s": 0, 
+            "w": 0
+        }, 
+        "lane2": {
+            "d": 0, 
+            "f": 0, 
+            "l": 0, 
+            "p": 0, 
+            "s": 0, 
+            "w": 0
+        }, 
+        "lane3": {
+            "d": 0, 
+            "f": 0, 
+            "l": 0, 
+            "p": 0, 
+            "s": 0, 
+            "w": 0
+        }, 
+        "lane4": {
+            "d": 0, 
+            "f": 0, 
+            "l": 0, 
+            "p": 0, 
+            "s": 0, 
+            "w": 0
+        }, 
+        "notes": "local://MIDI/double_tutorial.mid", 
+        "reward": "{\"crystal\":\"100\",\"growth_point\":\"30\"}", 
+        "sound": "local://Audio/bgm/tuning.mp3", 
+        "stamina": 1, 
+        "title": "Tutorial", 
+        "tune_id": -1
+    },
+    {
+        "artist": "Tutorial", 
+        "bpm": 120, 
+        "drop": [
+            {
+                "rate": 0.3, 
+                "type": "exp", 
+                "value": 10
+            }, 
+            {
+                "rate": 0.3, 
+                "type": "crystal", 
+                "value": 10
+            }, 
+            {
+                "rate": 0.4, 
+                "type": "level", 
+                "value": 10
+            }
+        ], 
+        "enemy": 100, 
+        "enemy_attack": 1, 
+        "exp": 1, 
+        "id": -1, 
+        "image": "http://app.talkspace-web.com/side/cosmo/assets/pl_image_001.jpg", 
+        "lane1": {
+            "d": 0, 
+            "f": 0, 
+            "l": 0, 
+            "p": 0, 
+            "s": 0, 
+            "w": 0
+        }, 
+        "lane2": {
+            "d": 0, 
+            "f": 0, 
+            "l": 0, 
+            "p": 0, 
+            "s": 0, 
+            "w": 0
+        }, 
+        "lane3": {
+            "d": 0, 
+            "f": 0, 
+            "l": 0, 
+            "p": 0, 
+            "s": 0, 
+            "w": 0
+        }, 
+        "lane4": {
+            "d": 0, 
+            "f": 0, 
+            "l": 0, 
+            "p": 0, 
+            "s": 0, 
+            "w": 0
+        },
+        "_notes": "local://MIDI/single_tutorial.mid",  
+        "notes": "local://MIDI/long_tutorial.mid", 
+        "reward": "{\"crystal\":\"100\",\"growth_point\":\"30\"}", 
+        "sound": "local://Audio/bgm/tuning.mp3", 
+        "stamina": 1, 
+        "title": "Tutorial", 
+        "tune_id": -1
+    }
+]
