@@ -62,6 +62,7 @@ function this.setAll( data )
 	playerInfoData['tutorial']          = tonumber( data['tutorial'] ) or 1
     playerInfoData['age']				= tonumber( data['age'] ) or 1
 	playerInfoData['test'] = tonumber(data['test']) or 0
+	playerInfoData['max_score'] 		= tonumber(data['max_score']) or 0
 
 	this.reload()
 end

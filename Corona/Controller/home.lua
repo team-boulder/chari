@@ -53,6 +53,9 @@ local function viewHandler( event )
 				native.showAlert( "警告", "入力欄が空白です", { "OK" })
 			end
 		end
+		if event.value == 'start' then
+			storyboard.gotoScene(ContDir..'play',{effect="slideLeft"})
+		end
 	end
 end
 
