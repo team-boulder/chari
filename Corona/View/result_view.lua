@@ -2,10 +2,10 @@ local self = object.new()
 
 local obj = {}
 
-function self.create()
+function self.create( params )
 	-- if obj.group == nil then
 	obj.group = display.newGroup()
-    local score = 0
+    local score = params.score or 0
 
     obj.bg = display.newRect(0,0,_W,_H)
     obj.bg:setFillColor(0)

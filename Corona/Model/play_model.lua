@@ -28,7 +28,7 @@ end
 --スコアセーブ
 function self.scoreSave()
     self.maxScore = playerInfoData['max_score']
-    if self.maxScore < self.dist 
+    if self.maxScore < self.dist then
         playerInfoData['max_score'] = self.dist
         playerInfo.save()
     end

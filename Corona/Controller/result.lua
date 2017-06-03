@@ -21,7 +21,7 @@ function scene:willEnterScene( event )
 	local group = self.view
 	result_view:addEventListener( viewHandler )
 
-	local result_obj = result_view.create()
+	local result_obj = result_view.create(event.params)
 	group:insert( result_obj )
 end
 
